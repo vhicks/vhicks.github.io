@@ -15,19 +15,21 @@
     height: 100vh;
 }
 .section-signup{
-    padding-top: 20vh;
+    padding-top: 35vh;
+    min-height: 675px;
+    width: 100%;
 }
 
 .page-header{
   min-height: 100vh;
   max-height: 999px;
   padding: 0;
-  color: $white-color;
+//   color: $dark-gray;
   position: relative;
   overflow: hidden;
 
   & > .content{
-    margin-top: 12%;
+    margin-top: 15%;
     text-align: center;
     margin-bottom: 50px;
   }
@@ -86,7 +88,7 @@
 
     .category,
     .description{
-      color: $opacity-8;
+      color: $copy-primary-color;
     }
 
     &:after,
@@ -109,7 +111,7 @@
     }
 
     &[filter-color="orange"]{
-        @include linear-gradient(rgba($black-color,.20), rgba(224, 23, 3, 0.6));
+        @include linear-gradient(rgba($white-color,.20), rgba(0, 0, 0, 0.6));
     }
 }
 

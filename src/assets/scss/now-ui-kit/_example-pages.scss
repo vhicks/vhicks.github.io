@@ -79,7 +79,7 @@
 }
 
 // style for the profile page
-.profile-page{
+.product-page{
 
     .page-header{
         min-height: 550px;
@@ -89,17 +89,16 @@
         color: #FFFFFF;
     }
     .photo-container{
-        width: 123px;
-        height: 123px;
-        border-radius: 50%;
+        width: 50%;
+        height: 25%;
+        border-radius: 10%;
         overflow: hidden;
         margin: 0 auto;
-        box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+        // box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
     }
 
     .title{
         text-align: center;
-        margin-top: 30px;
     }
 
     .description,
@@ -213,7 +212,7 @@
 }
 
 .login-page,
-.profile-page {
+.product-page {
   .page-header:before {
     position: absolute;
     z-index: 0;
@@ -223,7 +222,13 @@
     left: 0;
     top: 0;
     content: "";
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $white-color;
+  }
+
+  .footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
   }
 }
 
@@ -243,7 +248,8 @@
         .logo-container{
             width: 65px;
             margin: 0 auto;
-            margin-bottom: 55px;
+            margin-top: 30px;
+            margin-bottom: 35px;
 
             img{
                 width: 100%;
@@ -255,19 +261,19 @@
         }
 
         &.card-plain{
-            @include input-coloured-bg($opacity-5, $white-color, $white-color, $transparent-bg, $opacity-1, $opacity-2);
+            @include input-coloured-bg($opacity-5, $light-black, $white-color, $transparent-bg, $opacity-black-1, $opacity-2);
 
             .input-group-text,
             .form-group.no-border .input-group-text,
             .input-group.no-border .input-group-text{
-                color: $opacity-8;
+                color: $light-black;
             }
         }
     }
 
     .link{
         font-size: 10px;
-        color: $white-color;
+        color: $dark-gray;
         text-decoration: none;
     }
 }

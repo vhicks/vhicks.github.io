@@ -1,51 +1,56 @@
 <template>
-  <div class="page-header clear-filter" filter-color="orange">
+  <div class="page-header clear-filter" filter-color="white">
     <div
       class="page-header-image"
-      style="background-image: url('img/login.jpg')"
     ></div>
-    <div class="content">
+    <div class="content" style="min-height: 100vh; margin-bottom:-63px;">
       <div class="container">
         <div class="col-md-5 ml-auto mr-auto">
-          <card type="login" plain>
-            <div slot="header" class="logo-container">
-              <img v-lazy="'img/now-logo.png'" alt="" />
+          <div class="card card-plain card-login">
+            <div class="card-header">
+              <div class="logo-container">
+                <img v-lazy="'img/parrolink.png'" alt="" />
+              </div>
             </div>
-
-            <fg-input
-              class="no-border input-lg"
-              addon-left-icon="now-ui-icons users_circle-08"
-              placeholder="First Name..."
-            >
-            </fg-input>
-
-            <fg-input
-              class="no-border input-lg"
-              addon-left-icon="now-ui-icons text_caps-small"
-              placeholder="Last Name..."
-            >
-            </fg-input>
-
-            <template slot="raw-content">
-              <div class="card-footer text-center">
-                <a
-                  href="#pablo"
-                  class="btn btn-primary btn-round btn-lg btn-block"
-                  >Get Started</a
-                >
+            <div class="card-body">
+              <div class="form-group no-border input-lg form-control input-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <i class="input-group-text now-ui-icons ui-1_email-85"></i>
+                  </div>
+                  <input @blur="form.email = $event.target.value" aria-describedby="addon-right addon-left" placeholder="email" type="email" class="form-control">
+                </div>
               </div>
-              <div class="pull-left">
-                <h6>
-                  <a href="#pablo" class="link footer-link">Create Account</a>
-                </h6>
+              <div class="form-group no-border input-lg form-control input-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <i class="input-group-text now-ui-icons ui-1_lock-circle-open"></i>
+                  </div>
+                  <input @blur="form.password = $event.target.value"  aria-describedby="addon-right addon-left" placeholder="password" type="password" class="form-control">
+                </div>
               </div>
-              <div class="pull-right">
-                <h6>
-                  <a href="#pablo" class="link footer-link">Need Help?</a>
-                </h6>
+            </div>
+            <div class="card-footer text-center">
+              <div class="message is-danger text-center" v-if="error">
+                <div class="message-body">{{ error }}</div>
               </div>
-            </template>
-          </card>
+              <button
+                class="btn btn-primary btn-round btn-lg btn-block"
+                @click="login"
+                >Login</button
+              >
+            </div>
+            <!-- <div class="pull-left">
+              <h6>
+                <router-link to="/signup" class="link footer-link" >Create Account</router-link>
+              </h6>
+            </div> -->
+            <div class="pull-right">
+              <h6>
+                <a href="#pablo" class="link footer-link">Need Help?</a>
+              </h6>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -53,16 +58,39 @@
   </div>
 </template>
 <script>
+import database from '@/services/database';
 import { Card, Button, FormGroupInput } from '@/components';
 import MainFooter from '@/layout/MainFooter';
 export default {
   name: 'login-page',
   bodyClass: 'login-page',
+  props:['email','password'],
   components: {
     Card,
     MainFooter,
     [Button.name]: Button,
     [FormGroupInput.name]: FormGroupInput
+  },
+  data() {
+    return {
+      error: '',
+      form: {
+        email: '',
+        password:''
+      }
+    };
+  },
+  methods: {
+    async login () {
+        let result = await database.signIn(this.form.email, this.form.password)
+
+        if(result.message){
+          this.error = result.message
+        } else {
+          console.log('User has logged in!')
+          this.$router.push('/product')
+        }
+    }
   }
 };
 </script>

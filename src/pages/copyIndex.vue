@@ -3,14 +3,27 @@
     <div class="page-header clear-filter" filter-color="orange">
       <parallax
         class="page-header-image"
+        style="background-image:url('img/header.jpg')"
       >
       </parallax>
       <div class="container">
         <div class="content-center brand">
           <img class="n-logo" src="img/now-logo.png" alt="" />
-          <h1 class="h1-seo">Parrocode.</h1>
-          <h3>Let us make your shopping instant. For free.</h3>
+          <h1 class="h1-seo">Now UI Kit.</h1>
+          <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3>
         </div>
+        <h6 class="category category-absolute">
+          Designed by
+          <a href="http://invisionapp.com/" target="_blank">
+            <img src="img/invision-white-slim.png" class="invision-logo" /> </a
+          >. Coded by
+          <a href="https://www.creative-tim.com" target="_blank">
+            <img
+              src="img/creative-tim-white-slim2.png"
+              class="creative-tim-logo"
+            /> </a
+          >.
+        </h6>
       </div>
     </div>
     <div class="main">
@@ -32,6 +45,14 @@
         </div>
       </div>
     </div>
+    <basic-elements></basic-elements>
+    <navigation></navigation>
+    <tabs-section></tabs-section>
+    <progress-pagination></progress-pagination>
+    <notifications></notifications>
+    <typography></typography>
+    <javascript-components></javascript-components>
+    <carousel-section></carousel-section>
     <nucleo-icons-section></nucleo-icons-section>
     <div class="section">
       <div class="container text-center">

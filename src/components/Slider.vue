@@ -11,7 +11,7 @@ export default {
     disabled: Boolean,
     start: {
       type: [Number, Array],
-      default: 0
+      default: 1
     },
     connect: {
       type: [Boolean, Array],
@@ -21,8 +21,8 @@ export default {
       type: Object,
       default: () => {
         return {
-          min: 0,
-          max: 100
+          min: 1,
+          max: 30
         };
       }
     },
@@ -52,7 +52,7 @@ export default {
       });
       const slider = this.$el.noUiSlider;
       slider.on('slide', () => {
-        let value = slider.get();
+        let value = Math.round(slider.get());
         if (value !== this.value) {
           this.$emit('input', value);
         }
@@ -65,7 +65,7 @@ export default {
   watch: {
     value(newValue, oldValue) {
       const slider = this.$el.noUiSlider;
-      const sliderValue = slider.get();
+      const sliderValue = Math.round(slider.get());
       if (newValue !== oldValue && sliderValue !== newValue) {
         if (Array.isArray(sliderValue) && Array.isArray(newValue)) {
           if (

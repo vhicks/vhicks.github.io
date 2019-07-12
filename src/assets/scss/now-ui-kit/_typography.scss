@@ -73,7 +73,7 @@ p{
 
 .title{
     font-weight: $font-weight-bold;
-    padding-top: 30px;
+    padding-top: 15px;
 
 
     &.title-up{
@@ -97,7 +97,7 @@ p{
 }
 .category{
     text-transform: capitalize;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-light;
     color: $dark-gray;
 }
 .text-primary {

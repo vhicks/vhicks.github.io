@@ -14,11 +14,11 @@
           </router-link>
         </div>
         <div class="col">
-          <router-link to="/profile" target="_blank">
+          <router-link to="/product" target="_blank">
             <img src="img/profile.jpg" alt="Image" class="img-raised" />
           </router-link>
           <router-link
-            to="/profile"
+            to="/product"
             class="btn btn-simple btn-primary btn-round"
             >View Profile Page</router-link
           >
