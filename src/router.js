@@ -8,6 +8,7 @@ import Login from './pages/Login.vue';
 import Product from './pages/Product.vue';
 import MainNavbar from './layout/MainNavbar.vue';
 import MainFooter from './layout/MainFooter.vue';
+import NewVendor from './pages/NewVendor.vue';
 import store from '@/store';
 
 Vue.use(Router);
@@ -75,6 +76,14 @@ let router = new Router({
       path: '/signup',
       name: 'signup',
       components: { default: SignUp, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 }
+      }
+    },
+    {
+      path: '/newvendor',
+      name: 'newvendor',
+      components: { default: NewVendor, header: MainNavbar, footer: MainFooter },
       props: {
         header: { colorOnScroll: 400 }
       }

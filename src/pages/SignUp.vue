@@ -39,11 +39,14 @@
                     </div>
                     </div>
                 </div>
-            </div>
-            <div class="arrow bounce">
+                <div class="arrow bounce">
               <a class="fa fa-arrow-down fa-2x" href="#example"></a>
             </div>
-            
+            </div>
+            <parallax
+              class="page-header-image"
+            > <img src="img/croppedShop.jpg"/>
+            </parallax>
             <payment-form></payment-form>
             <div id="example"></div>
             <div class="message is-danger text-center" v-if="error">

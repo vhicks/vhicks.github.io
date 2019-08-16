@@ -40,14 +40,14 @@
                 >Login</button
               >
             </div>
-            <!-- <div class="pull-left">
+            <div class="pull-left">
               <h6>
                 <router-link to="/signup" class="link footer-link" >Create Account</router-link>
               </h6>
-            </div> -->
+            </div>
             <div class="pull-right">
               <h6>
-                <a href="#pablo" class="link footer-link">Need Help?</a>
+                <router-link to="/landing" class="link footer-link" >More Info</router-link>
               </h6>
             </div>
           </div>

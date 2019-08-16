@@ -5,3 +5,14 @@ img{
 .img-raised{
     box-shadow: $box-shadow-raised;
 }
+
+.landing-img{
+    height: 150px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.landing-img-lg{
+    height: 200px;
+}

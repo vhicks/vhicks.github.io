@@ -9,6 +9,9 @@
       <li class="nav-item"><router-link to="/main" class="nav-link">
         <i class="now-ui-icons business_bulb-63"></i> Features</router-link>
       </li>
+      <li class="nav-item"><router-link to="/newvendor" class="nav-link">
+        <i class="now-ui-icons shopping_shop"></i> Partnerships</router-link>
+      </li>
       <li class="nav-item" v-show="!currentUser"><router-link to="/login" class="nav-link">
         <i class="now-ui-icons users_circle-08"></i> Login</router-link>
       </li>

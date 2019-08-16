@@ -19,6 +19,24 @@
        color: $color;
        @include opacity($opacity);
    }
+   .dark-background {
+    .form-control::-moz-placeholder{
+        color: $white-color;
+        @include opacity($opacity);
+    }
+    .form-control:-moz-placeholder{
+        color: $white-color;
+        @include opacity($opacity);
+    }
+    .form-control::-webkit-input-placeholder{
+        color: $white-color;
+        @include opacity($opacity);
+    }
+    .form-control:-ms-input-placeholder{
+        color: $white-color;
+        @include opacity($opacity);
+    }
+   }
 }
 
 @mixin light-form(){

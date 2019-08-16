@@ -277,3 +277,16 @@
         text-decoration: none;
     }
 }
+
+.newvendor-page {
+  .footer {
+    bottom: 0;
+    width: 100%;
+  }
+
+  .link{
+    font-size: 15px;
+    color: $copy-primary-color;
+    text-decoration: none;
+}
+}

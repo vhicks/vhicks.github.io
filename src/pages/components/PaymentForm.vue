@@ -12,25 +12,25 @@
             </span>
              <div class="col-md-6 text-center ml-auto mr-auto col-md-8">
                 <fg-input
-                class="no-border"
+                class="no-border dark-background"
                 placeholder="Name on Account"
                 >
                 </fg-input>
 
                 <fg-input
-                class="no-border"
+                class="no-border dark-background"
                 placeholder="Bank Routing Number"
                 >
                 </fg-input>
 
                 <fg-input
-                class="no-border"
+                class="no-border dark-background"
                 placeholder="Checking Account Number"
                 >
                 </fg-input>
 
                 <fg-input
-                class="no-border"
+                class="no-border dark-background"
                 placeholder="Re-enter Account Number"
                 >
                 </fg-input>
@@ -42,19 +42,19 @@
             </span>
             <div class="col-md-6 text-center ml-auto mr-auto col-md-8">
                 <fg-input
-                class="no-border"
+                class="no-border dark-background"
                 placeholder="Name on card"
                 >
                 </fg-input>
 
                 <fg-input
-                class="no-border"
+                class="no-border dark-background"
                 placeholder="Card number"
                 >
                 </fg-input>
 
                 <fg-input
-                class="no-border"
+                class="no-border dark-background"
                 placeholder="Expiration"
                 >
                 </fg-input>
