@@ -1,6 +1,7 @@
 {
   "name": "eighteenth-chart-page",
   "version": "0.1.0",
+  "homepage": "https://https://vhicks.github.io/dist/",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -47,5 +48,6 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "wst": "/dist/"
 }
